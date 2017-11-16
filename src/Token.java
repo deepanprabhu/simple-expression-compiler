@@ -21,7 +21,9 @@ public class Token {
         getContents();
     }
     public char peek(){
-        return buffer.peek();
+        if(buffer.peek() != null)
+            return buffer.peek();
+        return '\0';
     }
     public char next(){
         return buffer.poll();
@@ -43,7 +45,6 @@ public class Token {
     }
     public Factor parseFactor() throws ParserException {
         skipspace();
-        System.out.println(peek());
         if(Character.isDigit(peek())){
             return new NumberFactor(parseNumber());
         }
