@@ -12,7 +12,7 @@ import java.util.Queue;
 public class Token {
     Queue<Character> buffer = new LinkedList<>();
     private void getContents(){
-        FileExpression f = new FileExpression("src/input.expr");
+        FileExpression f = new FileExpression("src/main/java/input.expr");
         for(char c : f.getContents().toCharArray()){
             buffer.add(new Character(c));
         }
