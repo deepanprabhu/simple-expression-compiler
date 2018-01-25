@@ -1,3 +1,7 @@
+asm/*.o
+asm/*.
+*.o
+*.
 # Compiled class file
 *.class
 
