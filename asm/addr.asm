@@ -16,6 +16,13 @@ _main:
     mov rax,0
     call _printf
 
+    mov rax,[rel number1]
+    imul rax,[rel number2]
+    mov rdi, format
+    mov rsi, rax
+    mov rax,0
+    call _printf
+
     xor rdi,rdi
     call _exit
     ret

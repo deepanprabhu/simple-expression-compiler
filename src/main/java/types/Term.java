@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 public class Term extends Factor {
+    static int ordinal = 0;
 
     @Getter
     @Setter
