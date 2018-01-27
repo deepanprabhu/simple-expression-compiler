@@ -10,11 +10,10 @@ public class NumberFactor extends Factor {
     @Getter
     String value;
 
-    private String representation;
     public NumberFactor(String value)
     {
         this.value = value;
-        representation = "[number" + ordinalValue + "]";
+
     }
 
     public void create(){
@@ -22,9 +21,5 @@ public class NumberFactor extends Factor {
         snippet.append("number").append(ordinalValue).append(":");
         snippet.append(" dq ").append(Integer.parseInt(value)).append("\n");
         super.addDS(snippet.toString());
-    }
-
-    public String get(){
-        return representation;
     }
 }
