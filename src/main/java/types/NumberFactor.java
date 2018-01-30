@@ -10,13 +10,12 @@ public class NumberFactor extends Factor {
     @Getter
     String value;
 
-    public NumberFactor(String value)
-    {
+    public NumberFactor(String value) {
         this.value = value;
 
     }
 
-    public void create(){
+    public void create() {
         StringBuilder snippet = new StringBuilder();
         snippet.append("number").append(ordinalValue).append(":");
         snippet.append(" dq ").append(Integer.parseInt(value)).append("\n");
